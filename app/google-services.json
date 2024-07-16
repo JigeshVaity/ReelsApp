@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "480667383580",
+    "project_id": "reelapp-73938",
+    "storage_bucket": "reelapp-73938.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480667383580:android:74a0e4af0a3e49bee26cd9",
+        "android_client_info": {
+          "package_name": "com.example.jigesh.trendbuzz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1nM5kvbuFSmLc_I0tqczNyLpw42qrfIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

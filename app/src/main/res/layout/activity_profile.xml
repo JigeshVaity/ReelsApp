@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/logout_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_gravity="end"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logout"/>
+        </LinearLayout>
+
+        <!-- Profile picture with add symbol -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/icon_account_circle"/>
+
+            <ImageView
+                android:id="@+id/add_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignBottom="@id/profile_pic"
+                android:layout_alignRight="@id/profile_pic"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="15dp"
+                android:visibility="gone"
+                android:src="@drawable/addimage"/>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:id="@+id/progress_bar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_username"
+            tools:text="username"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textSize="14sp"
+            tools:text="Logout"
+            android:id="@+id/profile_btn"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="start"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/following_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Following"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/follower_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Follower"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/post_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Post"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/post_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</RelativeLayout>
